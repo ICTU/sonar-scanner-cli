@@ -12,11 +12,7 @@ ADD entrypoint.sh .
 RUN chmod +x /entrypoint.sh
 
 ENV SONAR_SCANNER_OPTS="-Xmx512m"
-ENV SONAR_HOST_URL="http://localhost:9000"
-ENV SONAR_SOURCE_ENCONDING="UTF-8"
 ENV SONAR_SOURCES="."
-ENV SONAR_PROJECT_KEY=
-ENV SONAR_EXCLUSIONS=
 
 WORKDIR /src
 ENTRYPOINT [ "/entrypoint.sh" ]
