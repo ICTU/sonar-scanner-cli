@@ -1,8 +1,8 @@
-FROM adoptopenjdk/openjdk11:jre-11.0.7_10-alpine
+FROM adoptopenjdk/openjdk11:jre-11.0.9.1_1-alpine
 
 RUN apk add --update py-pip
 RUN pip install --upgrade pip && pip install -U setuptools && pip install -U pylint
-ENV SONAR_SCANNER_VERSION=4.4.0.2170
+ENV SONAR_SCANNER_VERSION=4.5.0.2216
 
 ADD https://binaries.sonarsource.com/Distribution/sonar-scanner-cli/sonar-scanner-cli-${SONAR_SCANNER_VERSION}.zip ./package.zip
 
